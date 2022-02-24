@@ -25,3 +25,7 @@
 lt -h # Все доступные аргументы
 lt -p 80 -s subdomain # Сайт будет доступен по ссылке subdomain.kobboy.tk
 ```
+
+### Скриншот выполнения
+![image](https://user-images.githubusercontent.com/56311174/155516626-13d4d880-7b02-44a9-bfb4-42f84fb49737.png)
+
