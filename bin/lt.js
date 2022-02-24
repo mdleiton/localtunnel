@@ -81,7 +81,9 @@ if (typeof argv.port !== 'number') {
     throw err;
   });
 
-  console.log('Your url is: %s', tunnel.url);
+  const url = tunnel.url.split('/').pop();
+  console.log('Your url is: \x1b[36m%s\x1b[0m', 'http://' + url);
+  console.log('Your secure url is: \x1b[36m%s\x1b[0m', 'https://' + url);
 
   /**
    * `cachedUrl` is set when using a proxy server that support resource caching.
