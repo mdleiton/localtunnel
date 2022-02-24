@@ -81,7 +81,7 @@ if (typeof argv.port !== 'number') {
     throw err;
   });
 
-  console.log('your url is: %s', tunnel.url);
+  console.log('Your url is: %s', tunnel.url);
 
   /**
    * `cachedUrl` is set when using a proxy server that support resource caching.
@@ -89,7 +89,7 @@ if (typeof argv.port !== 'number') {
    * @see https://github.com/localtunnel/localtunnel/pull/319#discussion_r319846289
    */
   if (tunnel.cachedUrl) {
-    console.log('your cachedUrl is: %s', tunnel.cachedUrl);
+    console.log('Your cachedUrl is: %s', tunnel.cachedUrl);
   }
 
   if (argv.open) {
@@ -97,6 +97,7 @@ if (typeof argv.port !== 'number') {
   }
 
   if (!argv['not-print-requests']) {
+    console.log('\nRequests:');
     tunnel.on('request', info => {
       console.log(new Date().toString(), info.method, info.path);
     });
