@@ -27,5 +27,5 @@ lt -p 80 -s subdomain # Сайт будет доступен по ссылке s
 ```
 
 ### Скриншот выполнения
-![image](https://user-images.githubusercontent.com/56311174/155516626-13d4d880-7b02-44a9-bfb4-42f84fb49737.png)
+![image](https://user-images.githubusercontent.com/56311174/155519616-15fbb8cc-6e44-4fd4-a23a-19cf06574bb6.png)
 
