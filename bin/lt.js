@@ -46,13 +46,13 @@ const { argv } = yargs
     alias: 'open',
     describe: 'Opens the tunnel URL in your browser',
   })
-  .option('print-requests', {
-    describe: 'Print basic request info',
+  .option('not-print-requests', {
+    describe: 'Do not print basic request info',
   })
   .require('port')
   .boolean('local-https')
   .boolean('allow-invalid-cert')
-  .boolean('print-requests')
+  .boolean('not-print-requests')
   .help('help', 'Show this help and exit')
   .version(version);
 
@@ -96,7 +96,7 @@ if (typeof argv.port !== 'number') {
     openurl.open(tunnel.url);
   }
 
-  if (argv['print-requests']) {
+  if (!argv['not-print-requests']) {
     tunnel.on('request', info => {
       console.log(new Date().toString(), info.method, info.path);
     });
