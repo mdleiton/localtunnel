@@ -10,14 +10,20 @@
 
 ```
 (sudo) npm i -g https://github.com/KBDI/localtunnel
+или
+(sudo) npm i -g KBDI/localtunnel
 ```
 
-### Если установлен пакет localtunnel
+### Если установлен пакет localtunnel, сначала удалите его
 
 ```
 (sudo) npm uninstall -g localtunnel
 (sudo) npm i -g https://github.com/KBDI/localtunnel
+или
+(sudo) npm i -g KBDI/localtunnel
 ```
+
+Чтобы скачать репозиторий из гитхаба, должен быть установлен git!
 
 ## Пример использования
 
