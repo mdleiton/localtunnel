@@ -101,7 +101,11 @@ if (typeof argv.port !== 'number') {
   if (!argv['not-print-requests']) {
     console.log('\nRequests:');
     tunnel.on('request', info => {
-      console.log(new Date().toString(), info.method, info.path);
+      const date = new Date(new Date().getTime()-(new Date().getTimezoneOffset()*60000))
+        .toISOString()
+        .slice(0, 19)
+        .replace('T', ' ');
+      console.log('\x1b[32m%s\x1b[0m %s %s', date, info.method, info.path);
     });
   }
 })();
