@@ -33,6 +33,9 @@ const { argv } = yargs
   .option('local-cert', {
     describe: 'Path to certificate PEM file for local HTTPS server',
   })
+  .option('token', {
+    describe: 'Code to authenticate on server',
+  })
   .option('local-key', {
     describe: 'Path to certificate key file for local HTTPS server',
   })
@@ -50,6 +53,7 @@ const { argv } = yargs
     describe: 'Do not print basic request info',
   })
   .require('port')
+  .require('token')
   .boolean('local-https')
   .boolean('allow-invalid-cert')
   .boolean('not-print-requests')
@@ -67,6 +71,7 @@ if (typeof argv.port !== 'number') {
     port: argv.port,
     host: argv.host,
     subdomain: argv.subdomain,
+    token: argv.token,
     local_host: argv.localHost,
     local_https: argv.localHttps,
     local_cert: argv.localCert,
