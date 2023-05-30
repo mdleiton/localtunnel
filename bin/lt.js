@@ -17,7 +17,7 @@ const { argv } = yargs
   .option('h', {
     alias: 'host',
     describe: 'Upstream server providing forwarding',
-    default: 'http://kobboy.cf/',
+    default: 'https://kbdi.ru/',
   })
   .option('s', {
     alias: 'subdomain',
